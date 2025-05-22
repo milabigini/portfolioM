@@ -1,0 +1,196 @@
+body,
+html {
+  margin: 0; /* Verwijdert de standaard marges */
+  padding: 0; /* Verwijdert de standaard padding */
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #a3d2bd;
+  color: black;
+}
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#nav {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+#navstijl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: solid 2px black;
+  border-radius: 15px;
+  background-image: url(../img/che_g03.gif);
+  color: #ff78d2;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#intro {
+  position: relative;
+}
+#intro > img {
+  width: 100%;
+}
+#intro > h1 {
+  position: absolute;
+  top: 44px;
+  margin-left: 937px;
+  font-size: xxx-large;
+}
+#intro > p {
+  position: absolute;
+  margin-left: 943px;
+  font-size: 21px;
+  margin-right: 43px;
+  line-height: 1.6;
+  margin-top: -515px;
+  letter-spacing: 0.5px;
+}
+#intro > audio {
+  margin-left: -489px;
+  z-index: 1;
+  margin-top: 286px;
+  position: absolute;
+}
+
+#game > iframe {
+  width: 499px;
+  height: 249px;
+  transform: scale(1.8);
+  padding-left: 159px;
+  padding-top: 80px;
+  padding-bottom: 28px;
+  position: absolute;
+}
+
+#game > a {
+  float: right;
+  padding-right: 232px;
+  padding-top: 220px;
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+  line-height: 1.6;
+}
+/* Media query voor schermgrootte 430px */
+@media (max-width: 430px) {
+  /* Voor schermen kleiner dan of gelijk aan 430px breed */
+
+  header {
+    height: auto; /* Maak de hoogte van de header automatisch om ruimte te besparen */
+    padding: 10px;
+    left: 0px;
+  }
+
+  #navLinks {
+    display: none; /* Menu is verborgen op kleinere schermen */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 20px; /* Afstand van de linkerkant */
+    z-index: 1000; /* Zorg dat de knop boven het menu blijft */
+    transform: scale(1);
+    width: 11%;
+  }
+
+  /* Verberg #navstijl standaard */
+  #navstijl {
+    display: none;
+    gap: 3%;
+    padding: 0;
+  }
+
+  /* Toon #navstijl wanneer de 'open' klasse wordt toegevoegd */
+  #navstijl.open {
+    display: grid;
+  }
+
+  #intro > img {
+    width: 94%;
+  }
+
+  #intro > h1 {
+    font-size: 1.5em;
+    top: 7%;
+    left: 73%;
+    margin-left: 0;
+  }
+
+  #intro > p {
+    font-size: 0.7em;
+    margin-left: 74%;
+    color: black;
+    margin-top: -31%;
+    width: auto;
+    margin-right: 0.5%;
+  }
+
+  #game > iframe {
+    width: auto;
+    padding-left: 47px;
+    height: 16%;
+    transform: scale(1.5);
+  }
+
+  #game > a {
+    padding-top: 3%;
+    font-size: 12px;
+    padding-right: 83%;
+  }
+}

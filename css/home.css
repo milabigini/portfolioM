@@ -1,0 +1,227 @@
+body {
+  overflow: hidden;
+  padding: 0;
+
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #49a0e7, #49a0e7, #ebf6fb);
+}
+
+.logo {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 204px;
+  height: auto;
+}
+.portfolio {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22%;
+}
+
+.welcome {
+  position: absolute;
+  top: 78px;
+  right: 19px;
+  width: 161px;
+  height: auto;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-bottom: 200px solid #fe95d0;
+  z-index: 1;
+  transform: rotateZ(-90deg);
+  margin: 22px;
+}
+
+.stars {
+  position: absolute;
+  background: url("../img/ster.png") repeat; /* Pad naar je sterretjesafbeelding */
+  background-size: 20px 20px; /* Pas de grootte van de sterren aan */
+  z-index: 0;
+  animation: moveStars 10s linear infinite; /* Animatie om sterren te laten bewegen */
+}
+
+.stars.top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Hoogte van de sterrenlijn aan de bovenkant */
+  background-position: 0 0; /* Beginpositie van de achtergrondafbeelding */
+}
+
+.stars.right {
+  top: 0;
+  right: 0;
+  width: 20px; /* Breedte van de sterrenlijn aan de rechterkant */
+  height: 100%;
+  background-position: 0 0; /* Beginpositie van de achtergrondafbeelding */
+}
+
+.stars.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Hoogte van de sterrenlijn aan de onderkant */
+  background-position: 0 0; /* Beginpositie van de achtergrondafbeelding */
+}
+
+.stars.left {
+  top: 0;
+  left: 0;
+  width: 20px; /* Breedte van de sterrenlijn aan de linkerkant */
+  height: 100%;
+  background-position: 0 0; /* Beginpositie van de achtergrondafbeelding */
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%; /* Beweeg de achtergrond door het vierkant */
+  }
+}
+
+.id {
+  width: 32%;
+  position: absolute;
+  left: 73px;
+  top: 180px;
+}
+
+.circle1 {
+  width: 50px;
+  height: 50px;
+  background-color: #ffd3ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #ff92d2;
+  font-family: Arial, sans-serif;
+  margin-left: 4%;
+  margin-top: 12%;
+}
+
+.design {
+  width: 26%;
+  position: absolute;
+  left: 41%;
+  top: 62%;
+  transform: rotateZ(-47deg);
+}
+
+.design1 {
+  width: 27%;
+  position: absolute;
+  left: 27%;
+  top: 53.5%;
+  z-index: -2;
+}
+.circle2 {
+  width: 50px;
+  height: 50px;
+  background-color: #ffd3ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #ff92d2;
+  font-family: Arial, sans-serif;
+  margin-left: 28%;
+  margin-top: 22%;
+}
+
+#slideshow {
+  width: 14%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; /* Voor absolute positionering van kinderen */
+  height: 100px; /* Zorg ervoor dat dit overeenkomt met de hoogte van je afbeeldingen */
+  left: 33%;
+}
+
+.container {
+  display: flex;
+  position: relative; /* Zorg ervoor dat de kinderen absoluut gepositioneerd kunnen worden */
+  width: 100%;
+  height: 100%;
+}
+
+.container section {
+  position: absolute; /* Zorg ervoor dat de secties boven elkaar liggen */
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Verberg alle secties standaard */
+  transition: opacity 1s ease-in-out; /* Zorg voor een soepele overgang */
+  
+}
+
+.container section:nth-child(1) img {
+  width: 100%; /* Zorg ervoor dat de afbeelding de volledige sectie vult */
+  height: auto;
+}
+.container section:nth-child(3) img {
+  width: 100%; /* Zorg ervoor dat de afbeelding de volledige sectie vult */
+  height: 99%;
+}
+.container section:nth-child(2) img {
+  width: 100%; /* Zorg ervoor dat de afbeelding de volledige sectie vult */
+  height: 99%;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply different delay to each slide */
+.container section:nth-child(1) {
+  animation: fade 9s ease-in-out infinite;
+  animation-delay: 0s; /* Start onmiddellijk */
+}
+.container section:nth-child(2) {
+  animation: fade 9s ease-in-out infinite;
+  animation-delay: 3s; /* Begin na 3 seconden */
+}
+.container section:nth-child(3) {
+  animation: fade 9s ease-in-out infinite;
+  animation-delay: 6s; /* Begin na 6 seconden */
+}
+
+.camera {
+  width: 24%;
+  height: 18.25%;
+  position: absolute;
+  top: 61.5%;
+  left: 73.5%;
+  z-index: -1;
+}

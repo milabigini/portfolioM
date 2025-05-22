@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@700&family=Fredoka+One&family=Roboto:ital,wght@0,100;1,300&display=swap");
+/* font-family: 'Expletus Sans', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Roboto', sans-serif; */
+
+/* alle kleuren */
+:root {
+  --text-color: black;
+  --textblack-color: black;
+  --header-bg-color: #62b2dd;
+  --link-bg-color: #1d1f80;
+  --linkclr-color: white;
+  --input-color: #ebf1f6;
+  --header-color: #e9dff6;
+  --footersection-bg-color: #c7c2f6;
+  --footer-bg-color: #fdfaed;
+  --footer-text-color: black;
+  --btntext-color: black;
+  --border-color: black;
+  --button-bg-color: white;
+  --text-color: black;
+  --hvrbutton-bg-color: black;
+  --hvrbutton-text-color: white;
+  --bg-color: white;
+  --focus-color: rgb(254, 117, 231);
+  --hover-color: rgb(254, 117, 231);
+  --active-color: #62b2dd;
+  --p1-bg-color: rgb(255, 255, 170);
+  --p2-bg-color: rgb(170, 232, 255);
+  --product-bg-color: rgb(235, 235, 235);
+}
+
+/* alle kleuren dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: rgb(255, 255, 255);
+    --textblack-color: black;
+    --header-bg-color: #0d92d9;
+    --link-bg-color: #6a5ea1;
+    --linkclr-color: rgb(255, 255, 255);
+    --input-color: #93b6d3;
+    --header-color: #e9dff6;
+    --footersection-bg-color: #6a5ea1;
+    --footer-bg-color: #ccc293;
+    --footer-text-color: rgb(0, 0, 0);
+    --btntext-color: rgb(255, 255, 255);
+    --border-color: rgb(255, 255, 255);
+    --button-bg-color: white;
+    --text-color: rgb(255, 255, 255);
+    --hvrbutton-bg-color: #93b6d3;
+    --hvrbutton-text-color: rgb(0, 0, 0);
+    --bg-color: rgb(0, 0, 0);
+    --focus-color: rgb(168, 58, 150);
+    --hover-color: rgb(168, 58, 150);
+    --active-color: #3e728f;
+    --p1-bg-color: #c3a210;
+    --p2-bg-color: #93b6d3;
+    --product-bg-color: rgb(120, 120, 120);
+  }
+
+  /* afbeelding donker of lichter darkmode */
+  img {
+    filter: brightness(0.8);
+  }
+  header > button > img {
+    filter: invert(1);
+  }
+  header > section > a > img {
+    filter: invert(1);
+  }
+
+  footer > img {
+    filter: invert(1);
+  }
+
+  /* koop pagina iconen */
+  #image1 {
+    filter: invert(1);
+  }
+
+  main > section:nth-of-type(1) > ul > li:before {
+    filter: invert(1);
+  }
+}
+
+/* focus van alles */
+:focus {
+  color: var(--focus-color);
+  border: 0.1875em solid var(--focus-color);
+}
+
+/* hover linkjes en buttons */
+a:hover {
+  color: var(--hover-color);
+}
+
+button:hover {
+  color: var(--hover-color);
+}
+
+/* active */
+a:active {
+  color: var(--active-color);
+  border: 0.1875em solid var(--active-color);
+}
+
+button:active {
+  color: var(--active-color);
+  border: 0.1875em solid var(--active-color);
+}
+
+body {
+  margin: 0em;
+  background-color: #bba2dc;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  row-gap: 2em;
+}
+
+header > section:nth-of-type(2) {
+  position: relative;
+  width: 100%;
+  height: 2em;
+  background-color: bba2dc;
+  line-height: 2em;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+/* tekst die veranderd */
+header > section > p {
+  margin-top: -53%;
+  --slide-time: 21s;
+
+  /* background-color: var(--header-bg-color); */
+
+  line-height: 1em;
+  width: -webkit-fill-available;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+
+  width: 100%;
+
+  animation: slide var(--slide-time) infinite linear backwards;
+}
+
+header > section > p:nth-child(1) {
+  /* background-color:#f006; */
+  /* animation: eerste 20s infinite; */
+  animation-delay: calc(var(--slide-time) / 3);
+}
+
+header > section > p:nth-child(2) {
+  /* background-color:#0f06; */
+  /* animation: tweede 20s infinite; */
+  animation-delay: calc(var(--slide-time) / 3 * 2);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(110vw);
+  }
+  67%,
+  100% {
+    transform: translateX(-110vw);
+  }
+}
+/* 
+@media (min-width: 40em) {
+  header > section > p {
+    --slide-time: 30s;
+  }
+}
+
+@media (min-width: 50em) {
+  header > section > p {
+    --slide-time: 39s;
+  }
+}
+
+@media (min-width: 60em) {
+  header > section > p {
+    --slide-time: 48s;
+  }
+} */
+
+/* keyframes een begin of eind punt van een transitie */
+/* z-index werkt alleen bij een bepaalde positie (bij mij is dat absolute) */
+/* z-index met een hogere index word gaat boven de gene met een lage index */
+/* begint left110em in het midden naar 0em dan eruit naar -100em dan met opacity terug de zelfde weg*/
+@keyframes eerste {
+  0% {
+    left: 110em;
+    opacity: 0;
+  }
+
+  20% {
+    left: 0em;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  40% {
+    left: -100em;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  60% {
+    left: -100em;
+    opacity: 0;
+  }
+
+  80% {
+    left: 0em;
+    opacity: 0;
+  }
+
+  /* tekst is uit het scherm door opacity blijft het blauw */
+  100% {
+    left: 110em;
+    opacity: 0;
+  }
+}
+
+@keyframes tweede {
+  0% {
+    left: -100em;
+    opacity: 0;
+  }
+
+  20% {
+    left: 0em;
+    opacity: 0;
+  }
+
+  /* tekst is uit het scherm door opacity blijft het blauw */
+  40% {
+    left: 110em;
+    opacity: 0;
+  }
+
+  60% {
+    left: 0em;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  80% {
+    left: -100em;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  100% {
+    left: -100em;
+    opacity: 0;
+  }
+}
+
+@keyframes derde {
+  0% {
+    left: -100em;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  20% {
+    left: -100em;
+    opacity: 0;
+  }
+
+  40% {
+    left: 0em;
+    opacity: 0;
+  }
+
+  /* tekst is uit het scherm door opacity blijft het blauw */
+  60% {
+    left: 110em;
+    opacity: 0;
+  }
+
+  80% {
+    left: 110em;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0em;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+/* hamburger menu img */
+header > button > img {
+  height: 2em;
+}
+header > button {
+  width: 16%;
+  border-style: none;
+  background-color: transparent;
+}
+
+/* nav blijft op zelfde plek (in hamburger menu) */
+/* door translate x kan hij horizontaal dicht (verstopt aan de linker kant) */
+nav {
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  z-index: 100;
+  transition: 0.5s ease-in;
+}
+
+/* als menu open is */
+nav.ikBenOpen {
+  transform: translateX(0%);
+  transition: 0.5s ease-out;
+  overflow: hidden;
+}
+
+/* sluit button */
+header > nav > button {
+  padding: 0.5em;
+  border: none;
+  background: transparent;
+}
+
+header > nav > button > img {
+  width: 4em;
+}
+
+nav > ul {
+  padding-left: 3em;
+  list-style: none;
+  line-height: 3em;
+  font-size: larger;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+header > nav > section {
+  background-color: var(--header-color);
+  justify-content: center;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  grid-gap: 1rem;
+  column-gap: 6em;
+}
+
+header > nav > section > a {
+  display: flex;
+  align-items: center;
+  gap: 0.15em;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header > nav > section > a > img {
+  height: 3em;
+}
+
+/* login in card */
+header > section:nth-of-type(2) {
+  position: absolute;
+  right: 2.9em;
+  top: 4em;
+  display: flex;
+  padding: 31%;
+  width: 26%;
+  border-top-left-radius: 10px; /* Links boven */
+  border-top-right-radius: 10px; /* Rechts boven */
+}
+
+header > section:nth-of-type(1) > a {
+  text-decoration: none;
+  background-color: white;
+  padding: 13px;
+  background-size: 2px;
+  text-align: center;
+  color: #bba2dc;
+  /* margin-left: 80px; */
+  border-radius: 30px;
+  position: fixed;
+  margin-top: 5px;
+  width: 10%;
+}
+
+header > section:nth-of-type(1) > a:nth-of-type(1) {
+  margin-left: 13%;
+}
+
+header > section:nth-of-type(1) > a:nth-of-type(2) {
+  margin-left: 61%;
+}
+header > section:nth-of-type(1) > a:nth-of-type(3) {
+  margin-left: 75%;
+}
+
+/* grote van afbeeldingen */
+header > section > a > img {
+  height: 2em;
+}
+
+/* grote van het logo */
+header > a > img {
+  height: 2em;
+}
+
+/* zoek */
+header form {
+  width: 100%;
+}
+
+form > input {
+  background-color: var(--input-color);
+  border: none;
+  height: 3.125em;
+  padding: 0 1.25em;
+  width: 100%;
+  background-image: url("../img/751463.png");
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+form > button {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+/* footer */
+
+/* hello kitty hoofd */
+footer > img {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-bottom: -18%;
+}
+
+footer > section:nth-of-type(1) {
+  background-color: var(--footersection-bg-color);
+  padding-bottom: 6em;
+}
+
+footer > section:nth-of-type(1) > h2 {
+  text-align: center;
+  padding-top: 23%;
+  font-family: "Fredoka One", cursive;
+}
+
+footer > section > input {
+  margin-left: 7%;
+  width: 46%;
+  padding: 4%;
+  border: 0.1em solid;
+}
+
+footer > section > button {
+  padding: 4%;
+  background-color: var(--button-bg-color);
+  border: 0.1em solid;
+  font-family: "Fredoka One", cursive;
+}
+
+footer > section:nth-of-type(2) {
+  background-color: var(--footer-bg-color);
+  background-image: url("../img/footer.webp");
+  background-repeat: no-repeat;
+  background-size: 3.5em;
+  background-position: right;
+  margin-top: -1em;
+  padding-bottom: 1em;
+}
+
+footer > section:nth-of-type(2) > h2 {
+  margin-left: 1em;
+  font-size: 1em;
+  padding-top: 15%;
+  font-family: "Fredoka One", cursive;
+}
+
+footer > section > ul {
+  margin-left: -4%;
+  list-style-type: none;
+  margin-top: 2%;
+  font-family: "Roboto", sans-serif;
+}
+
+footer > section > ul > li > a {
+  font-size: larger;
+  text-decoration: none;
+  color: var(--textblack-color);
+  line-height: 1.7em;
+}
+
+/* @media (min-width: 34.9375em) {
+} */
+
+/* @media (min-width: 25em) {
+  header > a {
+    display: flex;
+    justify-content: center;
+    width: 68%;
+  }
+} */
+
+/* @media (min-width: 34.9375em) {
+  header > nav > section {
+    background-color: var(--header-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding-bottom: 2em;
+    padding-top: 1em;
+  }
+} */
+
+/* @media (min-width: 50em) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 0.2em;
+  } */
+
+/* tekst slides */
+
+/* nav */
+header > nav > ul {
+  padding: 0.2em;
+  line-height: normal;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  text-align: center;
+  grid-gap: 1em;
+}
+
+header > nav {
+  white-space: nowrap;
+  transform: none;
+  transition: none;
+  background: transparent;
+  position: unset;
+  width: 100%;
+}
+
+/* hamburger menu niet meer te zien */
+header > button {
+  display: none;
+}
+
+header > nav > button {
+  display: none;
+}
+
+header > nav > a > button {
+  display: none;
+}
+
+header > nav > ul > li {
+  display: inline-block;
+  margin-right: 0.6em;
+}
+
+header > nav > section {
+  display: none;
+}
+
+/* iconen */
+header > section:nth-of-type(2) {
+  background-color: var(--header-color);
+  padding: 20px;
+  width: 71%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header > section:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.15em;
+}
+
+header > section:nth-of-type(2) a:nth-of-type(3) {
+  margin-right: auto;
+}
+
+/* logo */
+header > a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+header > a > img {
+  height: 4em;
+}
+
+footer > img {
+  width: 18%;
+  margin-bottom: -9%;
+}
+
+footer > section:nth-of-type(1) > h2 {
+  padding-top: 10%;
+}
+
+footer > section > input {
+  margin-left: 20%;
+  padding: 2%;
+}
+
+footer > section > button {
+  padding: 2%;
+}
+footer > section > h3 {
+  justify-items: start;
+  padding-left: 6%;
+}
+footer > section > ul {
+  justify-items: start;
+  padding-left: 10%;
+}
+
+/* footer > section:nth-of-type(2) > h2 {
+    font-size: 1em;
+    padding-top: 6%;
+    color: red;
+  } */
+/* 
+footer > section:nth-of-type(2) {
+  background-image: url("../img/footer.png");
+  background-size: 100%;
+  background-position: bottom;
+  padding-bottom: 4.5em;
+  color: red;
+} */

@@ -1,0 +1,314 @@
+body,
+html {
+  margin: 0; /* Verwijdert de standaard marges */
+  padding: 0; /* Verwijdert de standaard padding */
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #fffcf5;
+  color: #63b2dd;
+}
+button {
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#nav {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+#navstijl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: solid 2px white;
+  border-radius: 15px;
+  background-image: url(../img/che_g03.gif);
+  color: #ff78d2;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#intro {
+  position: relative;
+}
+#intro > img {
+  width: 100%;
+}
+#intro > h1 {
+  position: absolute;
+  top: 108px;
+  margin-left: 893px;
+  color: #fffcf5;
+  font-size: xxx-large;
+}
+#intro > p {
+  position: absolute;
+  color: #fffcf5;
+  margin-left: 897px;
+  font-size: 21px;
+  margin-right: 43px;
+  line-height: 1.6;
+  margin-top: -515px;
+  letter-spacing: 0.5px;
+}
+#intro > audio {
+  margin-left: -550px;
+  z-index: 1;
+  margin-top: 310px;
+  position: absolute;
+}
+
+#achtergrondtekst {
+  padding: 27px;
+}
+#achtergrondtekst > img {
+  position: absolute;
+  width: 102px;
+  margin-top: -12px;
+}
+#achtergrondtekst > p {
+  margin-left: 136px;
+  font-size: 21px;
+  line-height: 1.6;
+}
+#achtergrondtekst > ul {
+  margin-left: 136px;
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+#website {
+  background-color: #63b2dd;
+  padding: 87px;
+}
+
+#website > p:nth-of-type(1) {
+  color: #fffcf5;
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+#website > img {
+  width: 290px;
+  position: absolute;
+  margin-left: 920px;
+  margin-top: -137px;
+}
+
+#website > button {
+  margin-left: 900px;
+  margin-top: -46px;
+  padding: 41px;
+  width: 325px;
+  border-radius: 54px;
+  background: #fffcf5;
+  color: #63b2dd;
+  border: #63b2dd;
+  font-size: 21px;
+}
+
+#website > button > a {
+  text-decoration: none;
+  color: #63b2dd;
+  font-size: 21px;
+}
+
+/* Media Query voor telefoons */
+@media (max-width: 768px) {
+  /* Voor schermen kleiner dan 768px (tablet en telefoon) */
+
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  #nav {
+    flex-direction: column; /* Stapel de navigatie-items verticaal */
+    gap: 20px;
+  }
+
+  #intro > h1 {
+    font-size: 1.8em;
+    left: 10px;
+    top: 10%;
+  }
+
+  #intro > p {
+    font-size: 1em;
+    left: 10px;
+    top: 15%;
+  }
+
+  #website > button {
+    width: 100%;
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  #website > img {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -100px;
+  }
+}
+
+/* Media Query voor mobiele telefoons */
+@media (max-width: 480px) {
+  /* Voor schermen kleiner dan 480px (bijv. iPhone) */
+
+  body {
+    font-size: 14px; /* Verklein de tekst voor betere leesbaarheid op kleine schermen */
+  }
+
+  header {
+    padding: 5px;
+  }
+  header {
+    left: 0px;
+    height: 0%;
+  }
+  #navLinks {
+    display: none; /* Menu is verborgen op kleinere schermen */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #63b2dd;
+    border: 2px solid #63b2dd;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 20px; /* Afstand van de linkerkant */
+    z-index: 1000; /* Zorg dat de knop boven het menu blijft */
+    transform: scale(1);
+    width: 11%;
+  }
+
+  /* Verberg #navstijl standaard */
+  #navstijl {
+    display: none;
+    gap: 3%;
+    padding: 0;
+  }
+
+  /* Toon #navstijl wanneer de 'open' klasse wordt toegevoegd */
+  #navstijl.open {
+    display: grid;
+  }
+  #nav {
+    margin-top: 71%;
+  }
+  .button-2 {
+    border: 2px solid #63b2dd;
+  }
+  #intro > h1 {
+    font-size: 1.5em;
+    top: 1%;
+    margin-left: 69.5%;
+  }
+
+  #intro > p {
+    font-size: 0.8em;
+    top: 116%;
+    margin-top: -48%;
+    margin-left: 70%;
+    width: auto;
+  }
+  #intro audio {
+    display: none;
+  }
+  #achtergrondtekst {
+    padding: 47px;
+  }
+  #achtergrondtekst > img {
+    position: absolute;
+    width: 18%;
+    margin-top: -12px;
+  }
+  #achtergrondtekst > p {
+    margin-left: 136px;
+    line-height: 1.6;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  #achtergrondtekst > ul {
+    margin-left: 29%;
+    line-height: 1.6;
+    font-size: 1em;
+  }
+  #website {
+    background-color: #63b2dd;
+    padding: 4%;
+  }
+  #website > p:nth-of-type(1) {
+    color: #fffcf5;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  #website > button {
+    width: auto;
+    margin-left: 53px;
+    font-size: 1em;
+    padding: 3%;
+  }
+  #website > button > a {
+    text-decoration: none;
+    color: #63b2dd;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,294 @@
+html {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("../img/wallpaper.jpg");
+  background-size: cover;
+  font-size: 16px;
+  color: #ff78d2;
+}
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#nav {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+#navstijl {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+
+/* Zorg ervoor dat de hamburgerknop alleen zichtbaar is op kleinere schermen */
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: solid 2px #ff78d2;
+  border-radius: 15px;
+  background-image: url(../img/che_g03.gif);
+  color: #ff78d2;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+main {
+  margin-top: 17%;
+}
+main > button {
+  align-self: flex-end; /* Plaats de sluitknop aan de rechterkant */
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 20; /* Zorg ervoor dat de knop voor andere inhoud komt */
+}
+main > #intro {
+  color: #ff78d2;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  z-index: 1;
+}
+#intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Verplaatst het naar het midden */
+  text-align: center; /* Zorgt ervoor dat de tekst gecentreerd wordt */
+  z-index: 999; /* Optioneel, indien je wilt dat dit boven andere elementen komt */
+  width: 300px; /* Pas de breedte aan om het kleiner te maken */
+}
+
+#intro img {
+  display: block;
+  margin: 0 auto 10px; /* Centert de afbeelding en geeft wat ruimte tussen de afbeelding en de tekst */
+  width: 100px; /* Verklein de afbeelding, pas dit naar wens aan */
+  height: auto; /* Zorgt ervoor dat de verhoudingen behouden blijven */
+}
+
+#intro h1 {
+  font-size: 1em; /* Verklein de tekstgrootte */
+  margin: 0; /* Verwijdert extra ruimte boven de tekst */
+  line-height: 1.2em; /* Zorgt ervoor dat de tekst niet te veel ruimte inneemt */
+}
+
+.hidden {
+  display: none;
+}
+/* De overlay stijl */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    252,
+    237,
+    237,
+    0.6
+  ); /* Rood met een beetje transparantie */
+  z-index: 10; /* Zorg ervoor dat het boven de andere inhoud ligt */
+  display: none; /* Begin als verborgen */
+}
+
+/* Klassen om overlay zichtbaar te maken */
+.overlay.show {
+  display: block;
+}
+
+#matcha,
+#club,
+#mochi,
+#random {
+  background-color: #858735;
+  border-radius: 17px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Dit zorgt ervoor dat de div exact in het midden van het scherm komt */
+  padding: 20px;
+  z-index: 10; /* Zorgt ervoor dat de content boven andere elementen wordt weergegeven */
+  width: 70%; /* Zorg ervoor dat de div niet te breed is */
+  max-height: 80%; /* Zorg ervoor dat de div niet te hoog wordt */
+  overflow: auto; /* Maak de inhoud scrollbaar als deze groter is dan de div */
+}
+div {
+  padding: 1%;
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+  color: white;
+  font-size: 21px;
+}
+div > h2 {
+  margin-top: -5px;
+}
+div > #matcha,
+#club,
+#mochi,
+#random > p {
+  margin-top: -19px;
+}
+/* Zorg ervoor dat de button zich rechtsboven bevindt in de sectie */
+.close-btn {
+  position: absolute;
+  top: 10px; /* Zorgt ervoor dat de knop een beetje van de bovenkant is */
+  right: 10px; /* Zorgt ervoor dat de knop aan de rechterkant staat */
+  background-color: transparent; /* Zorgt ervoor dat de knop transparant is */
+  border: none; /* Geen rand om de knop */
+  font-size: 30px; /* De grootte van de knop */
+  color: white; /* De kleur van de knop */
+  cursor: pointer; /* Zorgt ervoor dat de knop een pointer is bij hoveren */
+  z-index: 10; /* Zorgt ervoor dat de knop boven de content komt te staan */
+}
+
+/* Voor de hidden class, als je dat gebruikt voor het verbergen van secties */
+.hidden {
+  display: none;
+}
+
+#matcha-preview {
+  margin-top: -8%;
+  margin-left: 5%;
+}
+#matcha-preview > p {
+  color: #858735;
+  margin-top: 2px;
+  margin-left: -21px;
+}
+#matcha-preview > img {
+  width: 80px;
+}
+#matcha {
+  background-color: #858735;
+  border-radius: 17px;
+}
+#matcha > img:nth-of-type(1) {
+  width: 21.2%;
+}
+#matcha > img {
+  width: 21%;
+  margin-left: 9px;
+}
+#club-preview {
+  margin-top: 15%;
+  margin-left: 27%;
+}
+#club-preview > p {
+  color: #f55fad;
+  margin-top: 2px;
+  margin-left: -21px;
+}
+#club-preview > img {
+  width: 80px;
+}
+#club {
+  background-color: #f55fad;
+  border-radius: 17px;
+}
+#club > img:nth-of-type(1) {
+  width: 37.6%;
+}
+#club > img {
+  width: 20%;
+}
+#mochi-preview {
+  margin-top: -40%;
+  margin-left: 66%;
+}
+#mochi-preview > p {
+  color: #90c376;
+  margin-top: 2px;
+  margin-left: -11px;
+}
+#mochi-preview > img {
+  width: 80px;
+}
+#mochi {
+  background-color: #90c376;
+  border-radius: 17px;
+  height: 61%;
+  width: 70%;
+}
+#mochi > #frame {
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  height: 100vh; /* Volledige hoogte van viewport */
+  margin: 0;
+  margin-top: -97px;
+}
+#mochi > #frame > iframe {
+  width: 63%;
+}
+#random-preview {
+  margin-top: 11%;
+  margin-left: 82%;
+}
+#random-preview > p {
+  color: #91beec;
+  margin-top: 2px;
+  margin-left: -34px;
+}
+#random-preview > img {
+  width: 80px;
+}
+#random {
+  background-color: #91beec;
+  border-radius: 17px;
+}
+#random > img {
+  width: 24%;
+}
+#random > img {
+  width: 24%;
+}
+#random > img:nth-of-type(1) {
+  width: 45.2%;
+}

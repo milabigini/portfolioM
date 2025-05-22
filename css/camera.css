@@ -1,0 +1,158 @@
+html {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  text-decoration: none;
+}
+body {
+  background-color: black;
+  background-size: 1437px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden; /* Voorkom horizontaal scrollen */
+  overflow-y: hidden; /* Sta verticaal scrollen toe als dat nodig is */
+}
+#nav {
+  border-width: 2px;
+  border-style: solid;
+  width: 163px;
+  position: absolute;
+  padding: 2px;
+  left: 20px;
+  text-align: center;
+  top: 17px;
+  line-height: 15px;
+  z-index: 1;
+  border-radius: 9px;
+}
+#navstijl > br {
+  display: none;
+}
+.button-2 {
+  border-radius: 15px;
+  color: black;
+  background-color: white;
+  font-weight: normal;
+  transform: scale(0.7);
+  font-size: 21px;
+  width: 210px;
+  margin-left: -22px;
+  height: 40px;
+  margin-bottom: -3px;
+  margin-top: 5px;
+}
+.book {
+  width: 600px; /* Breedte van het boek */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: scale(4.5);
+}
+
+.page {
+  padding: 20px;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Ruimte tussen de afbeeldingen */
+}
+
+.images img {
+  width: 100px; /* Breedte van de afbeeldingen */
+  height: auto;
+  margin-top: 7px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  transform: scale(0.5);
+  margin-top: -5px;
+  border: solid 1px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  padding-top: 3px;
+  margin-bottom: 5px;
+}
+.menu-toggle {
+  display: none;
+}
+/* Als het scherm kleiner is dan 430px */
+@media only screen and (max-width: 430px) {
+  /* Basisstijl voor het menu */
+  #navLinks {
+    display: none; /* Menu is verborgen op kleinere schermen */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 20px; /* Afstand van de linkerkant */
+    z-index: 1000; /* Zorg dat de knop boven het menu blijft */
+    transform: scale(1);
+  }
+
+  /* Verberg #navstijl standaard */
+  #navstijl {
+    display: none;
+    gap: 3%;
+    padding: 0;
+  }
+
+  /* Toon #navstijl wanneer de 'open' klasse wordt toegevoegd */
+  #navstijl.open {
+    display: grid;
+  }
+  #nav {
+    border: none;
+  }
+  .book {
+    border-radius: 10px;
+    overflow: hidden;
+    transform: scale(1.5);
+    margin-top: 5%;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12px;
+    gap: 0px;
+  }
+  .images img {
+    width: 51%;
+    height: auto;
+    border-radius: 5px;
+  }
+}

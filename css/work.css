@@ -1,0 +1,735 @@
+body,
+html {
+  margin: 0; /* Verwijdert de standaard marges */
+  padding: 0; /* Verwijdert de standaard padding */
+  height: 100%; /* Zorg ervoor dat de body de volledige hoogte van het scherm benut */
+  margin: 0; /* Verwijder alle marges rond de body */
+  overflow-x: hidden; /* Verberg horizontaal scrollen als dat niet nodig is */
+  margin-left: -9px;
+}
+
+body {
+  background-color: #fffcf5;
+  color: black;
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#navstijl {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+
+/* Zorg ervoor dat de hamburgerknop alleen zichtbaar is op kleinere schermen */
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* #intro {
+  position: relative;
+}
+#intro > img {
+  width: 100%;
+} */
+
+#intro {
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative; /* Belangrijk voor positionering van de overlay */
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  z-index: -1;
+}
+
+#intro img {
+  display: block;
+  width: 100%; /* De afbeelding vult de breedte van de container */
+  height: auto;
+  padding-left: 19px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 88px;
+  left: -23px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; /* Zorgt ervoor dat de drie div's gelijkmatig verdeeld worden */
+  align-items: center; /* Horizontaal in het midden uitlijnen */
+  color: #c9a1ef; /* Tekstkleur wit voor goede leesbaarheid op de afbeelding */
+  padding: 20px;
+}
+#design {
+  background-color: white;
+  padding: 5%;
+}
+#design > a {
+  text-decoration: none;
+  color: #c9a1ef;
+  font-size: 27px;
+}
+#coding,
+#ux,
+#Design {
+  text-align: center;
+  background-color: white;
+  border-radius: 147px;
+  width: 415px;
+  height: 378px;
+}
+
+#intro h1 {
+  margin-top: 7px;
+}
+#coding > p,
+#ux > p,
+#Design > p {
+  width: 350px;
+  padding-left: 30px;
+
+  font-size: 21px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Container styling voor alle secties */
+#bloembox,
+#stylish,
+#sanrio,
+#game,
+#book,
+#zeezicht {
+  position: relative; /* Zorg ervoor dat de knop absoluut wordt gepositioneerd binnen de container */
+  display: inline-block; /* Laat de container alleen zo groot zijn als de inhoud */
+  width: 100%; /* Pas de breedte aan naar wens */
+  max-width: 100%; /* Stel een maximale breedte in voor elke container, pas dit aan zoals nodig */
+  margin: -2px;
+  padding-left: 19px;
+}
+
+/* Afbeelding styling */
+#bloembox > img,
+#stylish > img,
+#sanrio > img,
+#game > img,
+#book > img,
+#zeezicht > img {
+  width: 100%;
+  display: block; /* Verwijder extra ruimte onder de afbeelding */
+  border: none;
+  margin-top: -5px;
+  margin-bottom: -8px;
+}
+/* Button styling */
+#bloembox > button,
+#stylish > button,
+#sanrio > button,
+#game > button,
+#book > button,
+#zeezicht > button {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 37px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 238px;
+  height: 54px;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#bloembox > button {
+  bottom: 122px;
+  left: 65%;
+  background-color: white;
+  color: #95ca82;
+}
+
+#bloembox > button:hover {
+  background-color: #95ca82;
+  color: white;
+  border-color: white; /* Verander de borderkleur bij hover */
+}
+
+#stylish > button {
+  bottom: 122px;
+  left: 69%;
+  background-color: black;
+  color: #f5cee5;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#stylish > button:hover {
+  background-color: #f5cee5;
+  color: black;
+  border-color: black; /* Verander de borderkleur bij hover */
+}
+
+#sanrio > button {
+  bottom: 122px;
+  left: 69%;
+  background-color: white;
+  color: #63b2dd;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#sanrio > button:hover {
+  background-color: #63b2dd;
+  color: white;
+  border-color: white; /* Verander de borderkleur bij hover */
+}
+
+#game > button {
+  bottom: 122px;
+  left: 73%;
+  background-color: black;
+  color: #a3d2bd;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#game > button:hover {
+  background-color: #a3d2bd;
+  color: black;
+  border-color: black; /* Verander de borderkleur bij hover */
+}
+
+#book > button {
+  bottom: 122px;
+  left: 69%;
+  background-color: white;
+  color: #eb8900;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#book > button:hover {
+  background-color: #eb8900;
+  color: white;
+  border-color: white; /* Verander de borderkleur bij hover */
+}
+
+#zeezicht > button {
+  bottom: 122px;
+  left: 70%;
+  background-color: white;
+  color: #0e1e54;
+  border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+}
+
+#zeezicht > button:hover {
+  background-color: #0e1e54; /* Verander de achtergrondkleur bij hover */
+  color: white;
+  border-color: white; /* Verander de borderkleur bij hover */
+}
+
+@media only screen and (max-width: 1038px) {
+  body,
+  html {
+    margin: 0; /* Verwijdert de standaard marges */
+    padding: 0; /* Verwijdert de standaard padding */
+    height: 100%; /* Zorg ervoor dat de body de volledige hoogte van het scherm benut */
+    margin: 0; /* Verwijder alle marges rond de body */
+    overflow-x: hidden; /* Verberg horizontaal scrollen als dat niet nodig is */
+    margin-left: -9px;
+  }
+
+  body {
+    background-color: #e9dff6;
+    color: black;
+    font-family: "roca", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  header {
+    position: fixed; /* Maak de container vast gepositioneerd */
+    top: 16px; /* Begin vanaf de bovenkant van het scherm */
+    left: -34px; /* Begin vanaf de linkerkant van het scherm */
+    width: 100%; /* Volledige breedte van de viewport */
+    height: 6%; /* Volledige hoogte van de viewport */
+    display: flex; /* Flexbox voor centreren */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    z-index: 1;
+  }
+
+  #navstijl {
+    display: flex; /* Flexbox gebruiken voor de navigatie-items */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren in de header */
+    gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+    padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+  }
+
+  header > a {
+    cursor: url(../img/nat996.png) 30 30, pointer;
+    color: #ff78d2;
+  }
+
+  .button-2 {
+    border: solid 2px white;
+    border-radius: 15px;
+    background-image: url(../img/che_g03.gif);
+    color: #ff78d2;
+    font-weight: 700;
+    font-size: 16px;
+    width: 125px;
+    height: 42px;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 3px 0;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  /* #intro {
+    position: relative;
+  }
+  #intro > img {
+    width: 100%;
+  } */
+
+  #intro {
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative; /* Belangrijk voor positionering van de overlay */
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #intro img {
+    display: block;
+    width: 100%; /* De afbeelding vult de breedte van de container */
+    height: auto;
+    padding-left: 19px;
+    margin-top: 45px;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 205px;
+    left: auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #c9a1ef;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  #coding,
+  #ux,
+  #Design {
+    text-align: center;
+    background-color: white;
+    border-radius: 147px;
+    width: auto;
+    height: auto;
+    margin-bottom: 2%;
+  }
+
+  #intro h1 {
+    margin-top: 7px;
+  }
+  #coding > p,
+  #ux > p,
+  #Design > p {
+    width: auto;
+    padding-left: 30px;
+
+    font-size: 21px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+
+  /* Container styling voor alle secties */
+  #bloembox,
+  #stylish,
+  #sanrio,
+  #game,
+  #book,
+  #zeezicht {
+    position: relative; /* Zorg ervoor dat de knop absoluut wordt gepositioneerd binnen de container */
+    display: inline-block; /* Laat de container alleen zo groot zijn als de inhoud */
+    width: 100%; /* Pas de breedte aan naar wens */
+    max-width: 100%; /* Stel een maximale breedte in voor elke container, pas dit aan zoals nodig */
+    margin: -2px;
+    padding-left: 19px;
+    margin-top: 309px;
+  }
+
+  /* Afbeelding styling */
+
+  #stylish > img,
+  #sanrio > img,
+  #game > img,
+  #book > img,
+  #zeezicht > img {
+    width: 100%;
+    display: block; /* Verwijder extra ruimte onder de afbeelding */
+    border: none;
+    margin-top: -308px;
+    margin-bottom: -8px;
+  }
+  #bloembox > img {
+    margin-top: 2px;
+  }
+
+  /* Button styling */
+  #bloembox > button,
+  #stylish > button,
+  #sanrio > button,
+  #game > button,
+  #book > button,
+  #zeezicht > button {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 37px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 238px;
+    height: 54px;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #bloembox > button {
+    bottom: 122px;
+    left: 67%;
+    background-color: white;
+    color: #95ca82;
+  }
+
+  #bloembox > button:hover {
+    background-color: #95ca82;
+    color: white;
+    border-color: white; /* Verander de borderkleur bij hover */
+  }
+
+  #stylish > button {
+    bottom: 88px;
+    left: 71%;
+    background-color: black;
+    color: #f5cee5;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #stylish > button:hover {
+    background-color: #f5cee5;
+    color: black;
+    border-color: black; /* Verander de borderkleur bij hover */
+  }
+
+  #sanrio > button {
+    bottom: 78px;
+    left: 70%;
+    background-color: white;
+    color: #63b2dd;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #sanrio > button:hover {
+    background-color: #63b2dd;
+    color: white;
+    border-color: white; /* Verander de borderkleur bij hover */
+  }
+
+  #game > button {
+    bottom: 82px;
+    left: 76%;
+    background-color: black;
+    color: #a3d2bd;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #game > button:hover {
+    background-color: #a3d2bd;
+    color: black;
+    border-color: black; /* Verander de borderkleur bij hover */
+  }
+
+  #book > button {
+    bottom: 122px;
+    left: 72%;
+    background-color: white;
+    color: #eb8900;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #book > button:hover {
+    background-color: #eb8900;
+    color: white;
+    border-color: white; /* Verander de borderkleur bij hover */
+  }
+
+  #zeezicht > button {
+    bottom: 122px;
+    left: 73%;
+    background-color: white;
+    color: #0e1e54;
+    border: 2px solid transparent; /* Maak de border aanvankelijk transparant */
+  }
+
+  #zeezicht > button:hover {
+    background-color: #0e1e54; /* Verander de achtergrondkleur bij hover */
+    color: white;
+    border-color: white; /* Verander de borderkleur bij hover */
+  }
+}
+@media only screen and (max-width: 1035px) {
+  #bloembox > img {
+    margin-top: 24px;
+  }
+}
+@media only screen and (max-width: 1035px) {
+  #bloembox > img {
+    margin-top: 192px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #e9dff6;
+    color: black;
+    font-family: "roca", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  header {
+    position: fixed;
+    top: 16px;
+    left: 0; /* Verwijder de negatieve waarde */
+    width: 100%;
+    height: auto; /* Automatisch schalen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  #bloembox > img {
+    margin-top: 24px;
+  }
+  /* Basisstijl voor het menu */
+  #navLinks {
+    display: none; /* Menu is verborgen op kleinere schermen */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #c9a1ef;
+    border: 2px solid #c9a1ef;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 20px; /* Afstand van de linkerkant */
+    z-index: 1000; /* Zorg dat de knop boven het menu blijft */
+    width: 11%;
+  }
+
+  /* Verberg #navstijl standaard */
+  #navstijl {
+    display: none;
+    gap: 3%;
+    padding: 0;
+  }
+
+  /* Toon #navstijl wanneer de 'open' klasse wordt toegevoegd */
+  #navstijl.open {
+    display: grid;
+  }
+
+  header > a {
+    cursor: pointer;
+    color: #ff78d2;
+  }
+
+  .button-2 {
+    border: solid 2px #c9a1ef;
+    border-radius: 10px;
+    background-image: url(../img/che_g03.gif);
+    color: #ff78d2;
+    font-weight: 700;
+    font-size: 14px;
+    width: 150px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    transition: all 200ms;
+  }
+
+  #intro {
+    display: flex;
+    flex-direction: column; /* Stapel de inhoud */
+    gap: 20px;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  #intro img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .text-overlay {
+    position: relative; /* Geen absolute positionering */
+    display: flex;
+    flex-direction: column; /* Stapel secties */
+    gap: 10px;
+    align-items: center;
+    color: #c9a1ef;
+    padding: 10px;
+    margin-top: -76%;
+    padding-bottom: 51%;
+  }
+
+  #coding,
+  #ux,
+  #Design {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0%;
+  }
+
+  #intro h1 {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  #coding > p,
+  #ux > p,
+  #Design > p {
+    width: 100%;
+    font-size: 70%;
+    line-height: 1.4;
+    padding-left: 0%;
+  }
+
+  #bloembox,
+  #stylish,
+  #sanrio,
+  #game,
+  #book,
+  #zeezicht {
+    display: block; /* Zorg dat elke container een blok is */
+    width: 100%; /* Neem de volledige breedte van het scherm */
+    margin: 0px auto; /* Voeg wat ruimte tussen de containers toe */
+    padding-left: 0%;
+  }
+
+  /* Zorg dat de afbeeldingen binnen hun container goed schalen */
+
+  #stylish > img,
+  #sanrio > img,
+  #game > img,
+  #book > img,
+  #zeezicht > img {
+    width: 100%; /* Vul de breedte van de container */
+    height: auto; /* Houd de verhoudingen van de afbeelding */
+    display: block; /* Verwijder extra ruimte onder de afbeelding */
+    margin: 0 auto; /* Centreer de afbeelding */
+  }
+  #bloembox > img {
+    margin-top: 38px;
+  }
+
+  #bloembox > button,
+  #stylish > button,
+  #sanrio > button,
+  #game > button,
+  #book > button,
+  #zeezicht > button {
+    border-radius: 20px;
+    font-size: 9px;
+    width: 19%;
+    height: auto;
+    text-align: center;
+    top: 74%;
+    right: 5%;
+    padding-top: 1%;
+  }
+}

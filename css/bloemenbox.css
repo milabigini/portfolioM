@@ -1,0 +1,493 @@
+body,
+html {
+  margin: 0; /* Verwijdert de standaard marges */
+  padding: 0; /* Verwijdert de standaard padding */
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #fffcf5;
+  color: #95ca82;
+}
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#nav {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+#navstijl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: solid 2px #95ca82;
+  border-radius: 15px;
+  background-image: url(../img/che_g03.gif);
+  color: #ff78d2;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#intro {
+  position: relative;
+}
+#intro > img {
+  width: 100%;
+}
+#intro > h1 {
+  position: absolute;
+  top: 108px;
+  margin-left: 893px;
+  color: #fffcf5;
+  font-size: xxx-large;
+}
+#intro > p:nth-of-type(1) {
+  position: absolute;
+  color: #fffcf5;
+  margin-left: 897px;
+  font-size: 21px;
+  margin-right: 43px;
+  line-height: 1.6;
+  margin-top: -515px;
+  letter-spacing: 0.5px;
+}
+#rondje {
+  width: 290px;
+  height: 290px;
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -342px;
+  margin-left: 891px;
+}
+#intro > p:nth-of-type(2) {
+  position: absolute;
+  color: #fffcf5;
+  margin-left: 1093px;
+  width: 2px;
+  font-size: 21px;
+  line-height: 1.6;
+  margin-top: -280px;
+  letter-spacing: 0.5px;
+}
+#intro > audio {
+  margin-left: 784px;
+  margin-top: -238px;
+}
+#uitleg > p:nth-of-type(1) {
+  padding-top: 34px;
+}
+#uitleg > p:nth-of-type(2) {
+  font-weight: bolder;
+}
+
+#uitleg > img {
+  position: absolute;
+  z-index: -1;
+  width: 306px;
+  padding-left: 144px;
+}
+
+#uitleg > p {
+  margin-left: 536px;
+  font-size: 21px;
+  margin-right: 43px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+#model > img {
+  width: 733px;
+  margin-left: 32px;
+  margin-top: 60px;
+  border-radius: 78px;
+  position: absolute;
+}
+
+#model > h1 {
+  padding-top: 69px;
+  font-size: xxx-large;
+  margin-left: 832px;
+}
+#model > p {
+  margin-left: 832px;
+  font-size: 21px;
+  margin-right: 43px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+#video {
+  margin-top: 321px;
+}
+#video > img:nth-of-type(1) {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#video > p {
+  margin-left: 835px;
+  font-size: 29px;
+  margin-right: 43px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  padding-top: 66px;
+}
+#video > .video-container > video {
+  width: 290px;
+  left: 353px;
+  position: relative;
+  border-radius: 39px;
+  top: -29px;
+}
+.video-container > iframe {
+  margin-left: 16%;
+  margin-top: 7%;
+}
+#video > img:nth-of-type(2) {
+  width: 727px;
+  margin-left: 134px;
+  height: 681px;
+  margin-top: -682px;
+}
+.video-container .full-width-video {
+  display: block;
+}
+
+.video-container .video-link {
+  display: none; /* Verberg de link standaard */
+}
+@media only screen and (max-width: 1369px) {
+  .video-container .full-width-video {
+    display: none; /* Verberg de video op kleine schermen */
+  }
+  .video-container .video-link {
+    display: inline-block; /* Toon de link op kleine schermen */
+    font-size: 16px;
+    color: #fffcf5; /* Linkkleur */
+    text-decoration: underline;
+    margin-left: 19%;
+    margin-top: -32%;
+  }
+  #intro > h1 {
+    position: absolute;
+    top: 5.625%;
+    margin-left: 893px;
+    color: #fffcf5;
+    font-size: xxx-large;
+  }
+}
+@media only screen and (max-width: 1261px) {
+  #rondje {
+    width: 262px;
+    height: 253px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -316px;
+    margin-left: 891px;
+  }
+}
+@media only screen and (max-width: 1186px) {
+  #intro > h1 {
+    position: absolute;
+    top: 5.625%;
+    margin-left: 59.51%;
+    color: #fffcf5;
+    font-size: xxx-large;
+  }
+  #intro > p:nth-of-type(1) {
+    position: absolute;
+    color: #fffcf5;
+    margin-left: 714px;
+    width: 33%;
+    font-size: 21px;
+    margin-right: 43px;
+    line-height: 1.6;
+    margin-top: -459px;
+    letter-spacing: 0.5px;
+  }
+  #rondje {
+    width: 19%;
+    height: 36%;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -22%;
+    margin-left: 58.41%;
+  }
+  #intro > audio {
+    margin-left: 55.41%;
+    margin-top: -19.59%;
+  }
+  #intro > p:nth-of-type(2) {
+    position: absolute;
+    color: #fffcf5;
+    margin-left: 60%;
+    width: 20%;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-top: -14%;
+    letter-spacing: 0.5px;
+  }
+  #uitleg > img {
+    position: absolute;
+    z-index: -1;
+    width: 33%;
+    padding-left: 7%;
+  }
+  #video {
+    margin-top: 0px;
+  }
+  #video > img:nth-of-type(2) {
+    width: 727px;
+    margin-left: -19.7%;
+    height: 682px;
+  }
+  #video > video {
+    width: 290px;
+    left: 23.5%;
+    position: relative;
+    border-radius: 39px;
+    top: -29px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    font-family: "roca", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #fffcf5;
+    color: #95ca82;
+  }
+
+  header {
+    position: fixed;
+    top: 16px;
+    left: 0; /* Verwijder de negatieve waarde */
+    width: 100%;
+    height: auto; /* Automatisch schalen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  #navLinks {
+    display: none; /* Menu is verborgen op kleinere schermen */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #ff78d2;
+    border: 2px solid #ff78d2;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute; /* Absoluut positioneren */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 20px; /* Afstand van de linkerkant */
+    z-index: 1000; /* Zorg dat de knop boven het menu blijft */
+    transform: scale(1);
+    width: 11%;
+  }
+
+  /* Verberg #navstijl standaard */
+  #navstijl {
+    display: none;
+    gap: 3%;
+    padding: 0;
+  }
+
+  /* Toon #navstijl wanneer de 'open' klasse wordt toegevoegd */
+  #navstijl.open {
+    display: grid;
+  }
+
+  header > a {
+    cursor: pointer;
+    color: #ff78d2;
+  }
+
+  .button-2 {
+    border: solid 2px #95ca82;
+    border-radius: 10px;
+    background-image: url(../img/che_g03.gif);
+    color: #ff78d2;
+    font-weight: 700;
+    font-size: 14px;
+    width: 150px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    transition: all 200ms;
+  }
+
+  #intro {
+    position: relative;
+    text-align: center; /* Centraal uitlijnen van de inhoud */
+  }
+
+  #intro > img {
+    width: 100%;
+    height: auto; /* Schalen met de viewport */
+  }
+
+  #intro > h1 {
+    position: relative;
+    margin: 16px auto;
+    color: #fffcf5;
+    margin-top: -42%;
+    margin-left: 50%;
+    font-size: 24px;
+  }
+
+  #intro > p:nth-of-type(1) {
+    position: relative;
+    margin: 10px auto;
+    color: #fffcf5;
+    margin-left: 59%;
+    font-size: 13px;
+    margin-top: -3%;
+    line-height: 1.4;
+    width: 39%;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  #rondje {
+    display: none;
+  }
+
+  #intro > p:nth-of-type(2) {
+    display: none;
+  }
+
+  #intro > audio {
+    display: none;
+  }
+
+  #uitleg > p {
+    margin: 16px 10px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #uitleg > p:nth-of-type(1) {
+    padding-top: 34px;
+    margin-left: 39%;
+  }
+  #uitleg > p:nth-of-type(2) {
+    font-weight: bolder;
+    margin-left: 39%;
+  }
+  #uitleg > p:nth-of-type(3) {
+    margin-left: 39%;
+  }
+
+  #uitleg > img {
+    width: 40%;
+    margin: 10px auto;
+    display: block;
+    margin-left: -7%;
+  }
+
+  #model > img {
+    width: 100%;
+    max-width: 430px;
+    border-radius: 20px;
+    margin: auto;
+    position: static;
+  }
+
+  #model > h1 {
+    font-size: 20px;
+    margin: 16px auto;
+    text-align: center;
+    margin-top: -13%;
+  }
+
+  #model > p {
+    font-size: 16px;
+    margin: 16px auto;
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  #video {
+    padding-bottom: 52%;
+  }
+
+  #video > img:nth-of-type(1) {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  #video > p {
+    display: none;
+  }
+
+  #video > video {
+    width: 24%;
+    margin-left: 11%;
+    margin-top: -47%;
+    border-radius: 12px;
+    display: block;
+  }
+
+  #video > img:nth-of-type(2) {
+    display: none;
+  }
+}
