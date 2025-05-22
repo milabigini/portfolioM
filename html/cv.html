@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" type="text/css" href="../css/cv.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">Home</button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">Photography</button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">My Work</button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">CV</button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">Linkedin</button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">Contact</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <iframe src="../img/cv.pdf#zoom=80"></iframe>
+    </main>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zeeicht</title>
+    <link rel="stylesheet" type="text/css" href="../css/zeezicht.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tgn7tgd.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">
+              <img src="../img/3320.gif" width="15px;" /> Home
+            </button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">
+              <img src="../img/musicnote.gif" width="15px;" /> Photography
+            </button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">
+              <img src="../img/pudding.gif" width="15px;" /> My Work
+            </button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">
+              <img src="../img/starstruck.gif" width="15px;" /> CV
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">
+              <img src="../img/magicwand.gif" width="15px;" /> Linkedin
+            </button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">
+              <img src="../img/starsmall.gif" width="15px;" /> Contact
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="intro">
+        <img src="../img/werk77.png" alt="" />
+        <h1>Zeezicht</h1>
+        <p>
+          With UX research and unity, I created an augmented reality game to let
+          kids learn about Sea pollution.
+        </p>
+
+        <div class="button-group">
+          <button
+            onclick="window.location.href='https://brawny-drum-56c.notion.site/Productbiografie-fa3fa4a9dfe943de948785f64ecddbac?pvs=4'"
+          >
+            Read documentation (dutch) / video
+          </button>
+        </div>
+      </div>
+      <div id="uitleg">
+        <!-- Wrapper voor afbeelding en knop -->
+        <div class="image-button-container">
+          <img src="../img/poster.png" alt="" />
+        </div>
+
+        <!-- Tekst in een aparte container -->
+        <div>
+          <p>
+            My project, ZeeZicht, focuses on designing an interactive,
+            child-friendly Augmented Reality (AR) experience that utilizes
+            gamification. The goal is to spark curiosity in children visiting
+            aquariums while raising awareness about plastic pollution. Through a
+            treasure hunt and mini-games, Rico, a virtual guide, leads children
+            on an educational journey through the underwater world.
+          </p>
+          <p>
+            The project began with the question: ‘How can I design an
+            interactive, child-friendly augmented reality experience using
+            gamification that stimulates children's curiosity about aquariums?’
+            As the process unfolded, I collaborated with Blijdorp Zoo and
+            tailored the app specifically for their needs. During this
+            collaboration, I realized that educating children about marine
+            pollution was a significant focus for Blijdorp. This insight shaped
+            my design, and I began integrating information about plastic
+            pollution into the gameplay.
+          </p>
+          <p>
+            To ensure ZeeZicht would both engage and educate, I conducted
+            several interviews with educators and children. These interviews
+            informed the design of the AR game, which combines digital
+            interaction with real-life observation activities. Rico, the virtual
+            guide, explains the dangers of plastic pollution and encourages
+            children to complete fun, interactive tasks both in the app and in
+            the aquarium environment.
+          </p>
+          <p>
+            The game includes gamification elements like rewards, obstacles, and
+            time limits to keep it engaging and challenging. I developed the
+            prototype using Unity, creating an immersive experience that
+            combines technology with physical exploration. The blend of
+            education, entertainment, and hands-on learning ensures that
+            children stay curious while becoming more aware of environmental
+            issues in a fun and interactive way.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

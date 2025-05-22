@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish</title>
+    <link rel="stylesheet" href="https://use.typekit.net/tgn7tgd.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/stylish.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">
+              <img src="../img/3320.gif" width="15px;" /> Home
+            </button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">
+              <img src="../img/musicnote.gif" width="15px;" /> Photography
+            </button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">
+              <img src="../img/pudding.gif" width="15px;" /> My Work
+            </button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">
+              <img src="../img/starstruck.gif" width="15px;" /> CV
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">
+              <img src="../img/magicwand.gif" width="15px;" /> Linkedin
+            </button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">
+              <img src="../img/starsmall.gif" width="15px;" /> Contact
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="intro">
+        <img src="../img/werk33.png" alt="" />
+        <h1>Stylish</h1>
+        <p>Using wordpress, I created a clothing site</p>
+        <audio controls>
+          <source src="../img/geluid/stylish.mp4" type="audio/mpeg" />
+          Je browser ondersteunt geen audio-element.
+        </audio>
+      </div>
+
+      <div id="uitleg">
+        <img src="../img/stylishp2.png" alt="" />
+        <p>
+          I created a clothing website in wordpress. The website has several
+          features for which I used plugins.
+        </p>
+        <p>
+          The style of stylish is based on Kpop, which is currently very
+          popular. There is much demand but little supply. This makes young
+          people quickly start looking for it. Here you can find different
+          styles worn by the k-artists. The color pink is a playful and happy
+          color and the color black gives strength. Also, the colors are based
+          on a famous group Blackpink.
+        </p>
+        <img src="../img/plugin.png" alt="" />
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

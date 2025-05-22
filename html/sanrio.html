@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sanrio</title>
+    <link rel="stylesheet" href="https://use.typekit.net/tgn7tgd.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/sanrio.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">
+              <img src="../img/3320.gif" width="15px;" /> Home
+            </button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">
+              <img src="../img/musicnote.gif" width="15px;" /> Photography
+            </button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">
+              <img src="../img/pudding.gif" width="15px;" /> My Work
+            </button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">
+              <img src="../img/starstruck.gif" width="15px;" /> CV
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">
+              <img src="../img/magicwand.gif" width="15px;" /> Linkedin
+            </button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">
+              <img src="../img/starsmall.gif" width="15px;" /> Contact
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="intro">
+        <img src="../img/sanrio.png" alt="" />
+        <h1>Sanrio</h1>
+        <p>
+          I improved the Sanrio website and make it accessible. I wrote this
+          code myself.
+        </p>
+        <audio controls>
+          <source src="../img/geluid/sanrio.mp3" type="audio/mpeg" />
+          Je browser ondersteunt geen audio-element.
+        </audio>
+      </div>
+      <div id="achtergrondtekst">
+        <img src="../img/twinkle.png" alt="" />
+        <p>I improved Sanrio's website.</p>
+        <p>What did I add/change:</p>
+        <ul>
+          <li>I made the website responsive.</li>
+          <li>I gave the website a bowel mode.</li>
+          <li>I made sure everything is read properly by the screenreader.</li>
+          <li>Focus is clearly displayed.</li>
+        </ul>
+      </div>
+      <div id="website">
+        <p>tip: click on "house" for the second page.</p>
+        <button>
+          <a href="https://stirring-cendol-544c0f.netlify.app/"
+            >see my website</a
+          >
+        </button>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

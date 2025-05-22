@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/camera.css" />
+    <title>Digitale Boek</title>
+  </head>
+  <body>
+    <div id="nav">
+      <!-- Hamburger menu knop voor mobiel -->
+      <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+        ☰
+      </button>
+
+      <div id="navstijl" id="navLinks" class="nav-links">
+        <br />
+
+        <a href="../index.html">
+          <button class="button-2" role="button">Home</button>
+        </a>
+        <a href="../html/photography.html">
+          <button class="button-2" role="button">Photography</button>
+        </a>
+        <a href="../html/work.html">
+          <button class="button-2" role="button">My Work</button>
+        </a>
+        <a href="../html/cv.html">
+          <button class="button-2" role="button">CV</button>
+        </a>
+        <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+          <button class="button-2" role="button">Linkedin</button>
+        </a>
+        <a href="mailto:mabbigini@gmail.com">
+          <button class="button-2" role="button">Contact</button>
+        </a>
+      </div>
+    </div>
+    <div class="book">
+      <div class="page" id="page0">
+        <div class="images">
+          <img src="../img/fotointro.png" alt="Introductie" />
+        </div>
+
+        <button class="next" onclick="nextPage(1)">Begin</button>
+      </div>
+      <div class="page" id="page1" style="display: none">
+        <div class="images">
+          <img src="../img/photo1.png" alt="Foto 1" />
+          <img src="../img/foto6.png" alt="Foto 2" />
+        </div>
+        <button class="prev" onclick="prevPage(0)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(2)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page2" style="display: none">
+        <div class="images">
+          <img src="../img/photo3.png" alt="Foto 3" />
+          <img src="../img/foto4.png" alt="Foto 4" />
+        </div>
+        <button class="prev" onclick="prevPage(1)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(3)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page3" style="display: none">
+        <div class="images">
+          <img src="../img/foto5.png" alt="Foto 5" />
+          <img src="../img/photo2.png" alt="Foto 6" />
+        </div>
+        <button class="prev" onclick="prevPage(2)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(4)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page4" style="display: none">
+        <div class="images">
+          <img src="../img/fotojourney.png" alt="Foto 7" />
+          <img src="../img/oefen1.png" alt="Foto 8" />
+        </div>
+        <button class="prev" onclick="prevPage(3)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(5)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page5" style="display: none">
+        <div class="images">
+          <img src="../img/oefen2.png" alt="Foto 9" />
+          <img src="../img/oefen3.png" alt="Foto 10" />
+        </div>
+        <button class="prev" onclick="prevPage(4)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(6)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page6" style="display: none">
+        <div class="images">
+          <img src="../img/oefen4.png" alt="Foto 11" />
+          <img src="../img/oefen5.png" alt="Foto 12" />
+        </div>
+        <button class="prev" onclick="prevPage(5)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(7)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page7" style="display: none">
+        <div class="images">
+          <img src="../img/oefen6.png" alt="Foto 13" />
+          <img src="../img/oefen7.png" alt="Foto 14" />
+        </div>
+        <button class="prev" onclick="prevPage(6)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(8)">Volgende pagina</button>
+      </div>
+      <div class="page" id="page8" style="display: none">
+        <div class="images">
+          <img src="../img/oefen8.png" alt="Foto 15" />
+        </div>
+        <button class="prev" onclick="prevPage(7)">Vorige pagina</button>
+        <button class="next" onclick="nextPage(0)">Go to the beginning</button>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

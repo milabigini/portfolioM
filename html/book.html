@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book</title>
+    <link rel="stylesheet" href="https://use.typekit.net/tgn7tgd.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/book.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">
+              <img src="../img/3320.gif" width="15px;" /> Home
+            </button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">
+              <img src="../img/musicnote.gif" width="15px;" /> Photography
+            </button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">
+              <img src="../img/pudding.gif" width="15px;" /> My Work
+            </button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">
+              <img src="../img/starstruck.gif" width="15px;" /> CV
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">
+              <img src="../img/magicwand.gif" width="15px;" /> Linkedin
+            </button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">
+              <img src="../img/starsmall.gif" width="15px;" /> Contact
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="intro">
+        <img src="../img/werk66.png" alt="" />
+        <h1>Book</h1>
+        <p>
+          With UX research, I created a book to discuss difficult topics with
+          your child.
+        </p>
+      </div>
+      <div id="uitleg">
+        <img src="../img/product.png" alt="" />
+        <p>
+          The Openhearted Adolescence Book is a fun and helpful guide designed
+          to improve communication between parents/caregivers and teenagers. It
+          covers topics like relationships, feelings of safety, sadness,
+          vaping/smoking, alcohol, separation, and romantic feelings. The goal
+          of the book is to create a comfortable and open environment where both
+          parties can communicate positively.
+        </p>
+        <p>
+          Why this design? The concept of the Openhearted Adolescence Book
+          emerged from the need to bridge the communication gap between
+          parents/caregivers and teenagers, especially in times when
+          communication can be challenging. Choosing a book format is based on
+          the positive responses from kids and experts, seeing the book as an
+          approachable and creative way to discuss sensitive topics. The book
+          aims to help parents and teenagers understand each other better
+          through positive and open conversations. We collaborated with experts
+          like Annet Peetoom and Magrethe to ensure the book provides useful
+          tips and ideas to enhance communication. The goal is to ask questions,
+          initiate discussions, and bring parents and teenagers closer through
+          positive and open conversations.
+        </p>
+      </div>
+      <div id="book">
+        <iframe src="../img/openbook.pdf" width="100%" height="600px"></iframe>
+        <div id="pdf-message" class="hidden">
+          <p>
+            Sorry, the PDF is not supported on mobile devices.
+            <a href="../img/openbook.pdf" target="_blank"
+              >Click here to view the PDF</a
+            >
+          </p>
+        </div>
+
+        <p>How to use the book:</p>
+        <ul>
+          <li>
+            Choose a topic: Both parties jointly select the topic they want to
+            discuss.
+          </li>
+          <li>
+            Open the scratch-off area: Beneath the scratch-off area is a
+            question or statement about the chosen topic.
+          </li>
+          <li>
+            Write your response: Both parties write their thoughts, feelings, or
+            answers to the question or statement.
+          </li>
+          <li>
+            Share with each other: Exchange each other's responses and discuss
+            them in an open and respectful manner.
+          </li>
+        </ul>
+        <p>When the book is printed out it will have a proper order</p>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>

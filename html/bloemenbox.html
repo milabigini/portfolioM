@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bloemenbox</title>
+    <link rel="stylesheet" href="https://use.typekit.net/tgn7tgd.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/bloemenbox.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <!-- Hamburger menu knop voor mobiel -->
+        <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </button>
+
+        <div id="navstijl" id="navLinks" class="nav-links">
+          <br />
+
+          <a href="../index.html">
+            <button class="button-2" role="button">
+              <img src="../img/3320.gif" width="15px;" /> Home
+            </button>
+          </a>
+          <a href="../html/photography.html">
+            <button class="button-2" role="button">
+              <img src="../img/musicnote.gif" width="15px;" /> Photography
+            </button>
+          </a>
+          <a href="../html/work.html">
+            <button class="button-2" role="button">
+              <img src="../img/pudding.gif" width="15px;" /> My Work
+            </button>
+          </a>
+          <a href="../html/cv.html">
+            <button class="button-2" role="button">
+              <img src="../img/starstruck.gif" width="15px;" /> CV
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/mila-bigini-a8a283238/">
+            <button class="button-2" role="button">
+              <img src="../img/magicwand.gif" width="15px;" /> Linkedin
+            </button>
+          </a>
+          <a href="mailto:mabbigini@gmail.com">
+            <button class="button-2" role="button">
+              <img src="../img/starsmall.gif" width="15px;" /> Contact
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="intro">
+        <img src="../img/werk22.png" alt="bloembox intro" />
+        <h1>Bloemenbox</h1>
+        <p>
+          I created an app meant to connect the user with people both offline
+          and online. Called the flower box. The flower box is accessible to
+          people with visual impairments.
+        </p>
+        <div id="rondje"></div>
+        <p>Mood music while scrolling</p>
+        <audio controls>
+          <source src="../img/geluid/bloemenbox.mp4" type="audio/mpeg" />
+          Je browser ondersteunt geen audio-element.
+        </audio>
+      </div>
+
+      <div id="uitleg">
+        <img src="../img/bloemenbox 1.png" alt="" />
+        <p>
+          The flower box consists of 3 parts. The app, the game and the box.
+        </p>
+        <p>Visually impaired</p>
+        <p>
+          users: The app is entirely out of voice command. The user uses only
+          his own voice, click and double click. On the box are Braille and
+          there is a tray inside with dried flowers to feel and smell. The game
+          consists of sounds and clicking.
+        </p>
+        <p>
+          With the phone you can search for the different boxes scattered in a
+          park. Via the maps you can see where the different boxes are placed.
+          When you click on a box it will show you the way. Through the app you
+          can find another person who also has the app. You can then send a
+          request to play with them. When the other person has accepted your
+          request, he/she will also be shown the way to go. So when two people
+          are at the box you can scan the QR code on the box. This way the app
+          keeps track of which boxes you have already had. When the game is
+          played the users will get information about the flower and get flower
+          seeds with it. so the user can collect all different flower seeds. The
+          boxes consist of solar energy.
+        </p>
+      </div>
+
+      <div id="model">
+        <img src="../img/3dmodel.png" alt="" />
+        <h1>3D Model</h1>
+        <p>
+          To better visualize my design, I created a 3D model in Blendr. This is
+          the flower box that will be in the park. Here the user can play the
+          nature game with his buddy. After the game the user will get
+          information about the flower and will get seeds from that flower. For
+          people with visual impairment, this box is completely accessible. On
+          the box are Braille and it is a sounds game.
+        </p>
+        <p>
+          The box also has a drawer, in this drawer will be dried flowers that
+          the user can feel and smell to get a better experience.
+        </p>
+      </div>
+      <div id="video">
+        <img src="../img/Bloemenbox (5).png" alt="" />
+        <p>Check my design out in this video</p>
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/CwTwgCA_Lkk"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <a
+            href="https://www.youtube.com/watch?v=CwTwgCA_Lkk&t=1s"
+            class="video-link"
+            target="_blank"
+            >Bekijk de video hier</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("open"); // Toggle de 'open' klasse om het menu te openen/sluiten
+      }
+      function toggleMenu() {
+        var navStijl = document.getElementById("navstijl"); // Selecteer #navstijl
+        navStijl.classList.toggle("open"); // Toggle de 'open' klasse
+      }
+    </script>
+  </body>
+</html>
