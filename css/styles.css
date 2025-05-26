@@ -28,6 +28,9 @@ a > button {
 a > .button-2 {
   color: white;
   background-color: black;
+  padding-bottom: 25px;
+  padding-top: 8px;
+  margin-bottom: 4%;
 }
 strong {
   color: black;
