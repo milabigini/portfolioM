@@ -1,12 +1,11 @@
 html {
-  cursor: url(../img/nat996.png) 30 30, pointer;
+  cursor: default;
   font-family: "roca", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 a {
-  cursor: url(../img/nat996.png) 30 30, pointer;
   text-decoration: none;
 }
 
@@ -16,7 +15,6 @@ body {
 }
 
 a {
-  cursor: url(../img/nat996.png) 30 30, pointer;
   color: #ff78d2;
 }
 
@@ -31,6 +29,7 @@ a > .button-2 {
   padding-bottom: 25px;
   padding-top: 8px;
   margin-bottom: 4%;
+  cursor: pointer;
 }
 strong {
   color: black;
@@ -299,14 +298,13 @@ h4 {
 
 @media only screen and (max-width: 430px) {
   html {
-    cursor: url(../img/nat996.png) 30 30, pointer;
+    cursor: default;
     font-family: "roca", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
   a {
-    cursor: url(../img/nat996.png) 30 30, pointer;
     text-decoration: none;
   }
 
@@ -318,7 +316,6 @@ h4 {
   }
 
   a {
-    cursor: url(../img/nat996.png) 30 30, pointer;
     color: #ff78d2;
   }
 
