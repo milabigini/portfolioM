@@ -216,19 +216,49 @@ h4 {
   border: solid;
   border-radius: 9px;
   margin-right: 4px;
-  width: 187px;
+  width: 188.4px;
 }
-#ID {
-  display: block;
-  font-size: 2.5em;
-  height: 250px;
-  color: black;
-  margin-top: -251px;
-  margin-left: 925px;
-  width: 421px;
-  padding-bottom: 28px;
+#id {
+  background-color: white;
   border-radius: 9px;
-  overflow: hidden;
+  padding-top: 17px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: -249px;
+  margin-left: 920px;
+}
+
+#ID {
+  height: 210px;
+  width: 217px;
+  border-radius: 9px;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  gap: 25px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  color: black;
+}
+
+.row p {
+  margin: 0;
+  padding-right: 17px;
+}
+.row:nth-of-type(1) p:nth-of-type(1) {
+  padding-right: 23px;
+}
+.row:nth-of-type(2) p:nth-of-type(1) {
+  padding-right: 37px;
 }
 
 #centerhalf2 {
@@ -255,7 +285,7 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-top: 102px;
+  margin-top: 129px;
 }
 #fifth > img {
   height: 147.5px;

@@ -6,6 +6,9 @@ html {
   margin: 0; /* Verwijder alle marges rond de body */
   overflow-x: hidden; /* Verberg horizontaal scrollen als dat niet nodig is */
   margin-left: -9px;
+  font-family: "roca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -315,8 +318,8 @@ header > a {
   .button-2 {
     border: solid 2px white;
     border-radius: 15px;
-    background-image: url(../img/che_g03.gif);
-    color: #ff78d2;
+    background-color: black;
+    color: white;
     font-weight: 700;
     font-size: 16px;
     width: 125px;
@@ -622,8 +625,8 @@ header > a {
   .button-2 {
     border: solid 2px #c9a1ef;
     border-radius: 10px;
-    background-image: url(../img/che_g03.gif);
-    color: #ff78d2;
+    background-color: black;
+    color: white;
     font-weight: 700;
     font-size: 14px;
     width: 150px;
